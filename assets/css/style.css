@@ -970,7 +970,7 @@ body.bright-sun-icon {
 }
 
 .home-social {
-  bottom: 75px;
+  bottom: 100px;
   position: absolute;
   left: 0;
 }
@@ -3033,10 +3033,6 @@ body.bright-sun-icon {
     flex-direction: row;
     gap: 30px;
     margin-top: 35px;
-  }
-
-  .home-scroll-btn {
-    display: none;
   }
 
   .avatar-container {
