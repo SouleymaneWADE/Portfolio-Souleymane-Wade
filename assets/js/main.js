@@ -383,6 +383,14 @@ cursorHoverlinks.forEach((cursorHoverlink) => {
 // });
 
 const themeBtn = document.querySelector(".theme-btn");
+const darkAvatar = document.querySelector(".dark-avatar");
+const lightAvatar = document.querySelector(".light-avatar");
+const brightAvatar = document.querySelector(".bright-avatar");
+
+// Gestion des images de la section "about-img"
+const darkAbout = document.querySelector(".dark-about");
+const lightAbout = document.querySelector(".light-about");
+const brightAbout = document.querySelector(".bright-about");
 
 themeBtn.addEventListener("click", () => {
   if (document.body.classList.contains("dark-theme")) {
@@ -390,14 +398,44 @@ themeBtn.addEventListener("click", () => {
     document.body.classList.add("bright-light-theme");
     themeBtn.classList.remove("active-sun-icon");
     themeBtn.classList.add("active-bright-sun-icon");
+
+    // Gestion des avatars
+    darkAvatar.style.display = "none";
+    lightAvatar.style.display = "none";
+    brightAvatar.style.display = "block";
+
+    // Gestion des images "about-img"
+    darkAbout.style.display = "none";
+    lightAbout.style.display = "none";
+    brightAbout.style.display = "block";
   } else if (document.body.classList.contains("bright-light-theme")) {
     document.body.classList.remove("bright-light-theme");
     document.body.classList.add("light-theme");
     themeBtn.classList.remove("active-bright-sun-icon");
+
+    // Gestion des avatars
+    darkAvatar.style.display = "none";
+    lightAvatar.style.display = "block";
+    brightAvatar.style.display = "none";
+
+    // Gestion des images "about-img"
+    darkAbout.style.display = "none";
+    lightAbout.style.display = "block";
+    brightAbout.style.display = "none";
   } else {
     document.body.classList.remove("light-theme");
     document.body.classList.add("dark-theme");
     themeBtn.classList.add("active-sun-icon");
+
+    // Gestion des avatars
+    darkAvatar.style.display = "block";
+    lightAvatar.style.display = "none";
+    brightAvatar.style.display = "none";
+
+    // Gestion des images "about-img"
+    darkAbout.style.display = "block";
+    lightAbout.style.display = "none";
+    brightAbout.style.display = "none";
   }
 
   const getCurrentTheme = () => {
@@ -409,18 +447,47 @@ themeBtn.addEventListener("click", () => {
   localStorage.setItem("wade-saved-theme", getCurrentTheme());
 });
 
-// Charger le thème sauvegardé
 document.addEventListener("DOMContentLoaded", () => {
-  const savedTheme = localStorage.getItem("wade-saved-theme");
+  const savedTheme = localStorage.getItem("wade-saved-theme") || "dark";
 
   if (savedTheme === "dark") {
     document.body.classList.add("dark-theme");
     themeBtn.classList.add("active-sun-icon");
+
+    // Gestion des avatars
+    darkAvatar.style.display = "block";
+    lightAvatar.style.display = "none";
+    brightAvatar.style.display = "none";
+
+    // Gestion des images "about-img"
+    darkAbout.style.display = "block";
+    lightAbout.style.display = "none";
+    brightAbout.style.display = "none";
   } else if (savedTheme === "light") {
     document.body.classList.add("light-theme");
     themeBtn.classList.add("active-bright-sun-icon");
+
+    // Gestion des avatars
+    darkAvatar.style.display = "none";
+    lightAvatar.style.display = "block";
+    brightAvatar.style.display = "none";
+
+    // Gestion des images "about-img"
+    darkAbout.style.display = "none";
+    lightAbout.style.display = "block";
+    brightAbout.style.display = "none";
   } else if (savedTheme === "bright-light") {
     document.body.classList.add("bright-light-theme");
+
+    // Gestion des avatars
+    darkAvatar.style.display = "none";
+    lightAvatar.style.display = "none";
+    brightAvatar.style.display = "block";
+
+    // Gestion des images "about-img"
+    darkAbout.style.display = "none";
+    lightAbout.style.display = "none";
+    brightAbout.style.display = "block";
   }
 });
 

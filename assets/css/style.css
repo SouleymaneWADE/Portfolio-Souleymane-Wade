@@ -959,10 +959,14 @@ body.bright-sun-icon {
   width: 225px;
   height: 225px;
 }
-
 .avatar-img img {
   position: absolute;
   width: 100%;
+  display: grid;
+  justify-items: center;
+  row-gap: 3px;
+  animation: up-down 1.5s linear infinite;
+  animation-delay: 1.85s;
 }
 
 .home-social {
@@ -1169,6 +1173,7 @@ body.bright-sun-icon {
    About Me
 ========================================= */
 .about-img {
+  top: -100px;
   position: relative;
   width: 35%;
   display: flex;
@@ -2721,6 +2726,7 @@ body.bright-sun-icon {
   }
 
   .about-img {
+    top: auto;
     width: 375px;
   }
 
@@ -3133,6 +3139,7 @@ body.bright-sun-icon {
   }
 
   .about-img {
+    top: auto;
     width: 100%;
     max-width: 375px;
   }
