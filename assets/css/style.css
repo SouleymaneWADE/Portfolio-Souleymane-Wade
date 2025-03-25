@@ -970,6 +970,7 @@ body.bright-sun-icon {
 }
 
 .home-social {
+  bottom: 75px;
   position: absolute;
   left: 0;
 }
@@ -3015,6 +3016,7 @@ body.bright-sun-icon {
   }
 
   .home-social {
+    bottom: auto;
     position: relative;
   }
 
