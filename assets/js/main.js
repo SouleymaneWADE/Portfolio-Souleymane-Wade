@@ -356,30 +356,72 @@ cursorHoverlinks.forEach((cursorHoverlink) => {
 ===================================================== */
 
 // Change theme and save current theme on click the theme button.
+// const themeBtn = document.querySelector(".theme-btn");
+
+// themeBtn.addEventListener("click", () => {
+//   themeBtn.classList.toggle("active-sun-icon");
+//   document.body.classList.toggle("light-theme");
+
+//   const getCurrentIcon = () =>
+//     themeBtn.classList.contains("active-sun-icon") ? "sun" : "moon";
+//   const getCurrentTheme = () =>
+//     document.body.classList.contains("light-theme") ? "light" : "dark";
+
+//   localStorage.setItem("wade-saved-icon", getCurrentIcon());
+//   localStorage.setItem("wade-saved-theme", getCurrentTheme());
+// });
+
+// // Get saved theme icon and theme on document loaded.
+// const savedIcon = localStorage.getItem("wade-saved-icon");
+// const savedTheme = localStorage.getItem("wade-saved-theme");
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   themeBtn.classList[savedIcon === "sun" ? "add" : "remove"]("active-sun-icon");
+//   document.body.classList[savedTheme === "light" ? "add" : "remove"](
+//     "light-theme"
+//   );
+// });
+
 const themeBtn = document.querySelector(".theme-btn");
 
 themeBtn.addEventListener("click", () => {
-  themeBtn.classList.toggle("active-sun-icon");
-  document.body.classList.toggle("light-theme");
+  if (document.body.classList.contains("dark-theme")) {
+    document.body.classList.remove("dark-theme");
+    document.body.classList.add("bright-light-theme");
+    themeBtn.classList.remove("active-sun-icon");
+    themeBtn.classList.add("active-bright-sun-icon");
+  } else if (document.body.classList.contains("bright-light-theme")) {
+    document.body.classList.remove("bright-light-theme");
+    document.body.classList.add("light-theme");
+    themeBtn.classList.remove("active-bright-sun-icon");
+  } else {
+    document.body.classList.remove("light-theme");
+    document.body.classList.add("dark-theme");
+    themeBtn.classList.add("active-sun-icon");
+  }
 
-  const getCurrentIcon = () =>
-    themeBtn.classList.contains("active-sun-icon") ? "sun" : "moon";
-  const getCurrentTheme = () =>
-    document.body.classList.contains("light-theme") ? "light" : "dark";
+  const getCurrentTheme = () => {
+    if (document.body.classList.contains("dark-theme")) return "dark";
+    if (document.body.classList.contains("light-theme")) return "light";
+    return "bright-light";
+  };
 
-  localStorage.setItem("wade-saved-icon", getCurrentIcon());
   localStorage.setItem("wade-saved-theme", getCurrentTheme());
 });
 
-// Get saved theme icon and theme on document loaded.
-const savedIcon = localStorage.getItem("wade-saved-icon");
-const savedTheme = localStorage.getItem("wade-saved-theme");
-
+// Charger le thème sauvegardé
 document.addEventListener("DOMContentLoaded", () => {
-  themeBtn.classList[savedIcon === "sun" ? "add" : "remove"]("active-sun-icon");
-  document.body.classList[savedTheme === "light" ? "add" : "remove"](
-    "light-theme"
-  );
+  const savedTheme = localStorage.getItem("wade-saved-theme");
+
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-theme");
+    themeBtn.classList.add("active-sun-icon");
+  } else if (savedTheme === "light") {
+    document.body.classList.add("light-theme");
+    themeBtn.classList.add("active-bright-sun-icon");
+  } else if (savedTheme === "bright-light") {
+    document.body.classList.add("bright-light-theme");
+  }
 });
 
 /* =====================================================
@@ -404,7 +446,7 @@ ScrollReveal().reveal(".home-social, .home-scroll-btn, .copy-right", {
   delay: 600,
   origin: "bottom",
 });
-ScrollReveal().reveal(".about-img", { delay: 700, origin: "top" });
+ScrollReveal().reveal(".about-img", { delay: 700, origin: "bottom" });
 ScrollReveal().reveal(".about-info, .wade-footer .wade-logo", {
   delay: 300,
   origin: "bottom",

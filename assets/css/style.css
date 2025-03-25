@@ -65,12 +65,22 @@ html {
   scroll-behavior: smooth;
 }
 
+.bright-light-theme {
+  background-color: skyblue;
+  color: darkblue;
+}
+
 body {
   background: darkblue;
   transition: 0.3s;
 }
 body.light-theme {
   background: darkred;
+  transition: 0.3s;
+}
+
+body.bright-sun-icon {
+  background: white;
   transition: 0.3s;
 }
 
@@ -118,6 +128,12 @@ body.light-theme {
   font-weight: var(--font-bold);
   margin-bottom: 10px;
 }
+.bright-light-theme h3 {
+  color: darkblue;
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-bold);
+  margin-bottom: 10px;
+}
 
 .section-title p {
   color: white;
@@ -126,6 +142,11 @@ body.light-theme {
 }
 .light-theme p {
   color: skyblue;
+  font-size: var(--base-font-size);
+  font-weight: var(--font-regular);
+}
+.bright-light-theme p {
+  color: darkblue;
   font-size: var(--base-font-size);
   font-weight: var(--font-regular);
 }
@@ -149,7 +170,7 @@ body.light-theme {
 }
 .light-theme::-webkit-scrollbar {
   width: 10px;
-  background: linear-gradient(to right, darkred, red);
+  background: linear-gradient(to right, red, rgba(255, 0, 0, 0.4));
   border-radius: 25px;
 }
 
@@ -242,6 +263,10 @@ body.light-theme {
   color: skyblue;
   transition: 0.3s;
 }
+.bright-light-theme .to-top-btn a {
+  color: darkblue;
+  transition: 0.3s;
+}
 
 .to-top-btn a:hover {
   color: white;
@@ -290,6 +315,14 @@ body.light-theme {
   cursor: pointer;
   transition: 0.3s;
 }
+.bright-light-theme .wade-main-btn {
+  background: linear-gradient(to right, darkblue, blue);
+  width: fit-content;
+  padding: 14px 30px;
+  border-radius: 35px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
 .wade-main-btn:hover {
   color: white;
@@ -298,6 +331,10 @@ body.light-theme {
 .light-theme .wade-main-btn:hover {
   color: white;
   background: red;
+}
+.bright-light-theme .wade-main-btn:hover {
+  color: white;
+  background: blue;
 }
 
 .wade-main-btn a {
@@ -358,6 +395,13 @@ body.light-theme {
   letter-spacing: -3px;
   transition: 0.3s;
 }
+.bright-light-theme .wade-logo a {
+  color: darkblue;
+  font-size: 2.6rem;
+  font-weight: bold;
+  letter-spacing: -3px;
+  transition: 0.3s;
+}
 
 .wade-logo a:hover {
   color: white;
@@ -379,6 +423,13 @@ body.light-theme {
 }
 .light-theme .lets-talk-icon {
   color: skyblue;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: 0.3s;
+  display: none;
+}
+.bright-light-theme .lets-talk-icon {
+  color: darkblue;
   font-size: 1.8rem;
   cursor: pointer;
   transition: 0.3s;
@@ -413,6 +464,13 @@ body.light-theme {
   cursor: pointer;
   transition: 0.3s;
 }
+.bright-light-theme .theme-btn i {
+  position: absolute;
+  color: darkblue;
+  font-size: 1.7rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
 .theme-btn:hover i {
   color: white;
@@ -433,6 +491,20 @@ body.light-theme {
 .theme-btn .moon-icon {
   opacity: 0;
   transition: 0.3s;
+}
+
+.theme-btn .bright-sun-icon {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.theme-btn.active-bright-sun-icon .bright-sun-icon {
+  opacity: 1;
+}
+
+.theme-btn.active-bright-sun-icon .moon-icon,
+.theme-btn.active-bright-sun-icon .sun-icon {
+  opacity: 0;
 }
 
 /* =========================================
@@ -489,6 +561,18 @@ body.light-theme {
   border-top: 1px solid skyblue;
   /* display: none; */
 }
+.bright-light-theme .bottom-nav .menu {
+  backdrop-filter: blur(10px);
+  padding: 16px 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 25px;
+  border-radius: 50px;
+  border-bottom: 1px solid darkblue;
+  border-top: 1px solid darkblue;
+  /* display: none; */
+}
 
 .bottom-nav .menu li a {
   display: flex;
@@ -511,6 +595,13 @@ body.light-theme {
   border-radius: 50%;
   transition: 0.3s;
 }
+.bright-light-theme .bottom-nav .menu li a i {
+  color: darkblue;
+  font-size: 1.4rem;
+  padding: 10px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
 
 .bottom-nav .menu li:hover a i {
   color: white;
@@ -519,6 +610,10 @@ body.light-theme {
 .light-theme .bottom-nav .menu li:hover a i {
   color: white;
   background: red;
+}
+.bright-light-theme .bottom-nav .menu li:hover a i {
+  color: white;
+  background: blue;
 }
 
 .bottom-nav .menu .current i {
@@ -529,12 +624,19 @@ body.light-theme {
   color: white;
   background: linear-gradient(to right, red, rgba(255, 0, 0, 0.4));
 }
+.bright-light-theme .bottom-nav .menu .current i {
+  color: white;
+  background: linear-gradient(to right, darkblue, blue);
+}
 
 .bottom-nav .menu .current i:hover {
   background: blue;
 }
 .light-theme .bottom-nav .menu .current i:hover {
   background: red;
+}
+.bright-light-theme .bottom-nav .menu .current i:hover {
+  background: blue;
 }
 
 .bottom-nav .menu li a span {
@@ -563,11 +665,27 @@ body.light-theme {
   pointer-events: none;
   opacity: 0;
 }
+.bright-light-theme .bottom-nav .menu li a span {
+  z-index: var(--z-tooltip);
+  position: absolute;
+  color: white;
+  background: blue;
+  font-weight: var(--font-medium);
+  font-size: var(--tiny-font-size);
+  padding: 3px 10px;
+  transform: translateY(-53px);
+  border-radius: 5px;
+  pointer-events: none;
+  opacity: 0;
+}
 
 .bottom-nav .menu li:hover a span {
   opacity: 1;
 }
 .light-theme .bottom-nav .menu li:hover a span {
+  opacity: 1;
+}
+.bright-light-theme .bottom-nav .menu li:hover a span {
   opacity: 1;
 }
 
@@ -587,6 +705,17 @@ body.light-theme {
   z-index: var(--z-minus);
   position: absolute;
   background: red;
+  width: 10px;
+  height: 10px;
+  left: 50%;
+  bottom: -8px;
+  transform: rotate(45deg) translateX(-50%);
+}
+.bright-light-theme .bottom-nav .menu li a span::before {
+  content: "";
+  z-index: var(--z-minus);
+  position: absolute;
+  background: blue;
   width: 10px;
   height: 10px;
   left: 50%;
@@ -624,6 +753,21 @@ body.light-theme {
   pointer-events: none;
   opacity: 0;
 }
+.bright-light-theme .bottom-nav .menu-hide-btn {
+  z-index: var(--z-fixed);
+  position: absolute;
+  top: -5px;
+  right: 0;
+  color: skyblue;
+  font-size: 1.52rem;
+  background: blue;
+  padding: 2px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease;
+  pointer-events: none;
+  opacity: 0;
+}
 
 .menu-hide-btn.active {
   pointer-events: all;
@@ -633,11 +777,18 @@ body.light-theme {
   pointer-events: all;
   opacity: 1;
 }
+.bright-light-theme .menu-hide-btn.active {
+  pointer-events: all;
+  opacity: 1;
+}
 
 .bottom-nav .menu-hide-btn:hover {
   color: white;
 }
 .light-theme .bottom-nav .menu-hide-btn:hover {
+  color: white;
+}
+.bright-light-theme .bottom-nav .menu-hide-btn:hover {
   color: white;
 }
 
@@ -669,6 +820,30 @@ body.light-theme {
   z-index: var(--z-fixed);
   position: fixed;
   background: linear-gradient(to right, red, rgba(255, 0, 0, 0.4));
+  backdrop-filter: blur(10px);
+  width: 85px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 5px;
+  translate: -50% 0;
+  left: 50%;
+  bottom: -75pxpx;
+  opacity: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s ease, 0.3s ease;
+  transition-property: bottom, opacity;
+  overflow: hidden;
+  animation: wiggle 2s linear infinite;
+  animation-delay: 1s;
+}
+.bright-light-theme .menu-show-btn {
+  z-index: var(--z-fixed);
+  position: fixed;
+  background: linear-gradient(to right, darkblue, blue);
   backdrop-filter: blur(10px);
   width: 85px;
   height: 50px;
@@ -737,6 +912,13 @@ body.light-theme {
   height: 4px;
   transition: 0.15s;
 }
+.bright-light-theme .menu-show-btn .bar-01,
+.bright-light-theme .menu-show-btn .bar-02 {
+  background: skyblue;
+  width: 40px;
+  height: 4px;
+  transition: 0.15s;
+}
 
 .menu-show-btn:hover .bar-01,
 .menu-show-btn:hover .bar-02 {
@@ -744,6 +926,10 @@ body.light-theme {
 }
 .light-theme .menu-show-btn:hover .bar-01,
 .light-theme .menu-show-btn:hover .bar-02 {
+  background: white;
+}
+.bright-light-theme .menu-show-btn:hover .bar-01,
+.bright-light-theme .menu-show-btn:hover .bar-02 {
   background: white;
 }
 
@@ -802,6 +988,15 @@ body.light-theme {
   transform: rotateZ(-90deg);
   transform-origin: left;
 }
+.bright-light-theme .home-social span {
+  position: absolute;
+  left: 10px;
+  color: darkblue;
+  font-size: var(--tiny-font-size);
+  white-space: nowrap;
+  transform: rotateZ(-90deg);
+  transform-origin: left;
+}
 
 .home-social .social-line {
   background-color: skyblue;
@@ -813,6 +1008,14 @@ body.light-theme {
 }
 .light-theme .home-social .social-line {
   background-color: skyblue;
+  width: 1px;
+  height: 100px;
+  margin-top: 37px;
+  margin-bottom: 25px;
+  margin-left: 10px;
+}
+.bright-light-theme .home-social .social-line {
+  background-color: darkblue;
   width: 1px;
   height: 100px;
   margin-top: 37px;
@@ -833,6 +1036,11 @@ body.light-theme {
 }
 .light-theme .home-social .social-icons li a {
   color: skyblue;
+  font-size: var(--xlarge-font-size);
+  transition: 0.3s;
+}
+.bright-light-theme .home-social .social-icons li a {
+  color: darkblue;
   font-size: var(--xlarge-font-size);
   transition: 0.3s;
 }
@@ -865,6 +1073,11 @@ body.light-theme {
   font-size: var(--base-font-size);
   font-weight: var(--font-semi-bold);
 }
+.bright-light-theme .avatar-info .hello-text {
+  color: darkblue;
+  font-size: var(--base-font-size);
+  font-weight: var(--font-semi-bold);
+}
 
 .avatar-info .my-name {
   color: white;
@@ -884,6 +1097,12 @@ body.light-theme {
   font-weight: var(--font-semi-bold);
   margin-bottom: 35px;
 }
+.bright-light-theme .avatar-info .what-i-do {
+  color: darkblue;
+  font-size: var(--base-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 35px;
+}
 
 .home-scroll-btn {
   position: absolute;
@@ -899,6 +1118,16 @@ body.light-theme {
   position: absolute;
   right: -5px;
   color: skyblue;
+  display: grid;
+  justify-items: center;
+  row-gap: 3px;
+  animation: up-down 1.5s linear infinite;
+  animation-delay: 1.85s;
+}
+.bright-light-theme .home-scroll-btn {
+  position: absolute;
+  right: -5px;
+  color: darkblue;
   display: grid;
   justify-items: center;
   row-gap: 3px;
@@ -979,6 +1208,12 @@ body.light-theme {
   font-weight: var(--font-regular);
   line-height: 25px;
 }
+.bright-light-theme .about-description {
+  color: darkblue;
+  font-size: var(--base-font-size);
+  font-weight: var(--font-regular);
+  line-height: 25px;
+}
 
 .pro-list {
   position: relative;
@@ -1002,6 +1237,16 @@ body.light-theme {
 }
 .light-theme .pro-card {
   background: linear-gradient(to right, red, rgba(255, 0, 0, 0.4));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  padding: 35px 25px;
+  text-align: left;
+  border-radius: 5px;
+}
+.bright-light-theme .pro-card {
+  background: linear-gradient(to right, darkblue, blue);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1071,6 +1316,19 @@ body.light-theme {
   cursor: pointer;
   transition: 0.3s;
 }
+.bright-light-theme .resume-tabs .tab-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
+  color: darkblue;
+  font-size: var(--medium-font-size);
+  font-weight: var(--font-medium);
+  padding: 12px 0;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
 .resume-tabs .tab-btn:hover {
   color: white;
@@ -1092,14 +1350,23 @@ body.light-theme {
   background: linear-gradient(to right, red, rgba(255, 0, 0, 0.4));
   padding: 12px 15px;
 }
+.bright-light-theme .resume-tabs .tab-btn.active {
+  color: white;
+  background: linear-gradient(to right, darkblue, blue);
+  padding: 12px 15px;
+}
 
 .resume-tabs .tab-btn.active:hover {
   color: white;
-  background-color: darkblue;
+  background-color: blue;
 }
 .light-theme .resume-tabs .tab-btn.active:hover {
   color: white;
   background-color: darkred;
+}
+.bright-light-theme .resume-tabs .tab-btn.active:hover {
+  color: white;
+  background-color: blue;
 }
 
 .resume-tab-content {
@@ -1126,6 +1393,12 @@ body.light-theme {
 }
 .light-theme .education .resum-line {
   background: red;
+  width: 2px;
+  height: 380px;
+  margin-bottom: 100px;
+}
+.bright-light-theme .education .resum-line {
+  background: darkblue;
   width: 2px;
   height: 380px;
   margin-bottom: 100px;
@@ -1163,6 +1436,14 @@ body.light-theme {
   height: 15px;
   border-radius: 50%;
 }
+.bright-light-theme .resume-items .item::before {
+  content: "";
+  position: absolute;
+  background: darkblue;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
 
 .resume-items .item .info {
   position: absolute;
@@ -1188,6 +1469,10 @@ body.light-theme {
   color: skyblue;
   font-size: 2.15rem;
 }
+.bright-light-theme .resume-items .item .info i {
+  color: darkblue;
+  font-size: 2.15rem;
+}
 
 .resume-items .item .info h5 {
   color: white;
@@ -1209,6 +1494,12 @@ body.light-theme {
   white-space: nowrap;
   margin-bottom: 18px;
 }
+.bright-light-theme .resume-items .item .info p {
+  color: darkblue;
+  font-size: var(--small-font-size);
+  white-space: nowrap;
+  margin-bottom: 18px;
+}
 
 .resume-items .item .info span {
   position: relative;
@@ -1226,6 +1517,14 @@ body.light-theme {
   padding: 3px 12px;
   border-radius: 3px;
 }
+.bright-light-theme .resume-items .item .info span {
+  position: relative;
+  background: linear-gradient(to right, darkblue, blue);
+  color: skyblue;
+  font-size: var(--font-medium);
+  padding: 3px 12px;
+  border-radius: 3px;
+}
 
 .experience .resume-line {
   background: skyblue;
@@ -1234,6 +1533,11 @@ body.light-theme {
 }
 .light-theme .experience .resume-line {
   background: red;
+  width: 2px;
+  height: 250px;
+}
+.bright-light-theme .experience .resume-line {
+  background: darkblue;
   width: 2px;
   height: 250px;
 }
@@ -1272,6 +1576,17 @@ body.light-theme {
   flex-direction: column;
   padding: 50px 25px;
   border-bottom: 5px solid red;
+  border-radius: 10px;
+}
+.bright-light-theme .skill-card {
+  position: relative;
+  background: linear-gradient(to right, darkblue, blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 25px;
+  border-bottom: 5px solid darkblue;
   border-radius: 10px;
 }
 
@@ -1370,6 +1685,21 @@ body.light-theme {
   cursor: pointer;
   overflow: hidden;
 }
+.bright-light-theme .service-card {
+  position: relative;
+  background: linear-gradient(to right, darkblue, blue);
+  width: 275px;
+  height: 285px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  border-bottom: 5px solid darkblue;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
 
 .service-icon {
   color: skyblue;
@@ -1452,6 +1782,20 @@ body.light-theme {
   padding: 50px 25px 50px 45px;
   border-radius: 15px;
   border-bottom: 5px solid red;
+  overflow: hidden;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.5s, opacity 05s;
+}
+.bright-light-theme .service-modal {
+  position: relative;
+  background: linear-gradient(to right, darkblue, blue);
+  width: 825px;
+  height: fit-content;
+  margin: 75px 25px;
+  padding: 50px 25px 50px 45px;
+  border-radius: 15px;
+  border-bottom: 5px solid darkblue;
   overflow: hidden;
   transform: scale(0);
   opacity: 0;
@@ -1580,6 +1924,15 @@ body.light-theme {
   cursor: pointer;
   transition: 0.3s;
 }
+.bright-light-theme .portfolio-tabs .tab-btn {
+  color: darkblue;
+  font-size: var(--medium-font-size);
+  font: var(--font-medium);
+  padding: 12px 0;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
 .portfolio-tabs .tab-btn:hover {
   color: white;
@@ -1595,14 +1948,23 @@ body.light-theme {
   background: linear-gradient(to right, red, rgba(255, 0, 0, 0.4));
   padding: 12px 25px;
 }
+.bright-light-theme .portfolio-tabs .tab-btn.active {
+  color: skyblue;
+  background: linear-gradient(to right, darkblue, blue);
+  padding: 12px 25px;
+}
 
 .portfolio-tabs .tab-btn.active:hover {
   color: white;
-  background: darkblue;
+  background: blue;
 }
 .light-theme .portfolio-tabs .tab-btn.active:hover {
   color: white;
   background: red;
+}
+.bright-light-theme .portfolio-tabs .tab-btn.active:hover {
+  color: white;
+  background: blue;
 }
 
 .portfolio-container {
@@ -1632,6 +1994,14 @@ body.light-theme {
 .light-theme .portfolio-card {
   position: relative;
   background: linear-gradient(to right, red, rgba(255, 0, 0, 0.4));
+  width: 350px;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.bright-light-theme .portfolio-card {
+  position: relative;
+  background: linear-gradient(to right, darkblue, blue);
   width: 350px;
   border-radius: 10px;
   cursor: pointer;
@@ -1738,6 +2108,17 @@ body.light-theme {
   transform: scale(0);
   opacity: 0;
 }
+.bright-light-theme .portfolio-modal {
+  position: relative;
+  background: linear-gradient(to right, darkblue, blue);
+  max-width: 900px;
+  height: fit-content;
+  margin: 75px 25px;
+  padding: 50px 45px;
+  border-radius: 15px;
+  transform: scale(0);
+  opacity: 0;
+}
 
 .portfolio-modal.active {
   transform: scale(1);
@@ -1828,6 +2209,11 @@ body.light-theme {
   font-weight: var(--font-regular);
   color: skyblue;
 }
+.bright-light-theme .swiper-slide .client-details span {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-regular);
+  color: darkblue;
+}
 
 .swiper-slide .client-details p {
   color: skyblue;
@@ -1837,6 +2223,12 @@ body.light-theme {
 }
 .light-theme .swiper-slide .client-details p {
   color: skyblue;
+  font-size: var(--base-font-size);
+  font-weight: var(--font-regular);
+  margin-top: 15px;
+}
+.bright-light-theme .swiper-slide .client-details p {
+  color: darkblue;
   font-size: var(--base-font-size);
   font-weight: var(--font-regular);
   margin-top: 15px;
@@ -1859,6 +2251,12 @@ body.light-theme {
   font-size: 4.5rem;
   transition: 0.3s ease;
 }
+.bright-light-theme .swiper-button-next i,
+.bright-light-theme .swiper-button-prev i {
+  color: darkblue;
+  font-size: 4.5rem;
+  transition: 0.3s ease;
+}
 
 .swiper-button-next i:hover,
 .swiper-button-prev i:hover {
@@ -1872,6 +2270,10 @@ body.light-theme {
 .light-theme .swiper-pagination-bullet,
 .light-theme .swiper-pagination-bullet-active {
   background: linear-gradient(to right, red, rgba(255, 0, 0, 0.4));
+}
+.bright-light-theme .swiper-pagination-bullet,
+.bright-light-theme .swiper-pagination-bullet-active {
+  background: linear-gradient(to right, darkblue, blue);
 }
 
 /* =========================================
@@ -1928,6 +2330,17 @@ body.light-theme {
   align-items: center;
   border-radius: 10px;
 }
+.bright-light-theme .contact-icon {
+  color: skyblue;
+  font-size: 2rem;
+  background: linear-gradient(to right, darkblue, blue);
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
 
 .contact-method {
   display: flex;
@@ -1942,6 +2355,11 @@ body.light-theme {
 }
 .light-theme .contact-method span {
   color: skyblue;
+  font-size: var(--tiny-font-size);
+  text-transform: uppercase;
+}
+.bright-light-theme .contact-method span {
+  color: darkblue;
   font-size: var(--tiny-font-size);
   text-transform: uppercase;
 }
@@ -1960,6 +2378,10 @@ body.light-theme {
   color: skyblue;
   transition: 0.3s;
 }
+.bright-light-theme .contact-method a {
+  color: darkblue;
+  transition: 0.3s;
+}
 
 .contact-method a:hover {
   color: white;
@@ -1975,6 +2397,16 @@ body.light-theme {
 }
 
 .contact-social-links {
+  width: 100%;
+  display: flex;
+  column-gap: 10px;
+}
+.light-theme .contact-social-links {
+  width: 100%;
+  display: flex;
+  column-gap: 10px;
+}
+.bright-light-theme .contact-social-links {
   width: 100%;
   display: flex;
   column-gap: 10px;
@@ -2002,6 +2434,17 @@ body.light-theme {
   border-radius: 50%;
   cursor: pointer;
 }
+.bright-light-theme .contact-social-links li {
+  font-size: 1.75rem;
+  background: linear-gradient(to right, darkblue, blue);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
 .contact-social-links li a {
   color: skyblue;
@@ -2011,8 +2454,18 @@ body.light-theme {
   color: skyblue;
   transition: 0.3s;
 }
+.bright-light-theme .contact-social-links li a {
+  color: skyblue;
+  transition: 0.3s;
+}
 
 .contact-social-links li a:hover {
+  color: white;
+}
+.light-theme .contact-social-links li a:hover {
+  color: white;
+}
+.bright-light-theme .contact-social-links li a:hover {
   color: white;
 }
 
@@ -2026,6 +2479,13 @@ body.light-theme {
 .light-theme .contact-form-body {
   position: relative;
   background: linear-gradient(to right, red, rgba(255, 0, 0, 0.4));
+  width: 100%;
+  padding: 50px;
+  border-radius: 35px;
+}
+.bright-light-theme .contact-form-body {
+  position: relative;
+  background: linear-gradient(to right, darkblue, blue);
   width: 100%;
   padding: 50px;
   border-radius: 35px;
@@ -2045,6 +2505,9 @@ body.light-theme {
 .light-theme .contact-form-body h2 span {
   color: skyblue;
 }
+.bright-light-theme .contact-form-body h2 span {
+  color: skyblue;
+}
 
 .contact-form-body p {
   color: skyblue;
@@ -2052,6 +2515,11 @@ body.light-theme {
   margin-bottom: 45px;
 }
 .light-theme .contact-form-body p {
+  color: skyblue;
+  font-size: var(--tiny-font-size);
+  margin-bottom: 45px;
+}
+.bright-light-theme .contact-form-body p {
   color: skyblue;
   font-size: var(--tiny-font-size);
   margin-bottom: 45px;
@@ -2079,6 +2547,17 @@ body.light-theme {
   color: white;
   font-size: var(--small-font-size);
   background: darkred;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 17px 20px;
+  border-radius: 10px;
+}
+.bright-light-theme .contact-form-body form .input-group input,
+.bright-light-theme .contact-form-body form .input-group textarea {
+  color: white;
+  font-size: var(--small-font-size);
+  background: skyblue;
   width: 100%;
   border: none;
   outline: none;
@@ -2132,13 +2611,18 @@ body.light-theme {
    Footer
 ========================================= */
 .wade-footer {
-  background: linear-gradient(to bottom, blue, rgba(0, 0, 255, 0.4));
-  padding-top: 65px;
+  background: linear-gradient(to bottom, darkblue, skyblue);
+  padding-top: 135px;
   padding-bottom: 135px;
 }
 .light-theme .wade-footer {
   background: linear-gradient(to bottom, darkred, red);
-  padding-top: 65px;
+  padding-top: 135px;
+  padding-bottom: 135px;
+}
+.bright-light-theme .wade-footer {
+  background: linear-gradient(to bottom, skyblue, darkblue);
+  padding-top: 135px;
   padding-bottom: 135px;
 }
 
@@ -2146,6 +2630,12 @@ body.light-theme {
   color: skyblue;
 }
 .light-theme .wade-footer .wade-container .inner .wade-logo a:hover {
+  color: white;
+}
+.bright-light-theme .wade-footer .wade-container .inner .wade-logo a {
+  color: darkblue;
+}
+.bright-light-theme .wade-footer .wade-container .inner .wade-logo a:hover {
   color: white;
 }
 
@@ -2370,6 +2860,10 @@ body.light-theme {
     font-size: 1.6rem;
     display: block;
   }
+  .bright-light-theme .lets-talk-icon {
+    font-size: 1.6rem;
+    display: block;
+  }
 
   .theme-btn i {
     font-size: 1.6rem;
@@ -2413,6 +2907,9 @@ body.light-theme {
     padding: 50px 0;
   }
   .light-theme .skill-card {
+    padding: 50px 0;
+  }
+  .bright-light-theme .skill-card {
     padding: 50px 0;
   }
 
@@ -2553,6 +3050,10 @@ body.light-theme {
     width: 100%;
     padding: 0 20px;
   }
+  .bright-light-theme .bottom-nav {
+    width: 100%;
+    padding: 0 20px;
+  }
 
   .bottom-nav .menu {
     padding: 17px 25px;
@@ -2561,6 +3062,12 @@ body.light-theme {
     width: 100%;
   }
   .light-theme .bottom-nav .menu {
+    padding: 17px 25px;
+    justify-content: space-between;
+    column-gap: 7px;
+    width: 100%;
+  }
+  .bright-light-theme .bottom-nav .menu {
     padding: 17px 25px;
     justify-content: space-between;
     column-gap: 7px;
@@ -2575,11 +3082,18 @@ body.light-theme {
     font-size: 1.15rem;
     padding: 7px;
   }
+  .bright-light-theme .bottom-nav .menu li a i {
+    font-size: 1.15rem;
+    padding: 7px;
+  }
 
   .bottom-nav .menu-hide-btn {
     font-size: 1.25rem;
   }
   .light-theme .bottom-nav .menu-hide-btn {
+    font-size: 1.25rem;
+  }
+  .bright-light-theme .bottom-nav .menu-hide-btn {
     font-size: 1.25rem;
   }
 
@@ -2595,11 +3109,20 @@ body.light-theme {
     row-gap: 4px;
     bottom: -30px;
   }
+  .bright-light-theme .menu-show-btn {
+    width: 75px;
+    height: 45px;
+    row-gap: 4px;
+    bottom: -30px;
+  }
 
   .menu-show-btn.active {
     bottom: 30px;
   }
   .light-theme .menu-show-btn.active {
+    bottom: 30px;
+  }
+  .bright-light-theme .menu-show-btn.active {
     bottom: 30px;
   }
 
@@ -2706,10 +3229,9 @@ body.light-theme {
   .contact-social-links {
     column-gap: 20px;
   }
-  .contact-social-links li {
-    font-size: 1.65px;
-    width: 75px;
-    height: 75px;
+
+  .contact-social-links {
+    font-size: 1.65rem;
   }
 
   .contact-form-body {
