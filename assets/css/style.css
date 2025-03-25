@@ -2616,7 +2616,7 @@ body.bright-sun-icon {
    Footer
 ========================================= */
 .wade-footer {
-  background: linear-gradient(to bottom, darkblue, skyblue);
+  background: linear-gradient(to bottom, darkblue, blue);
   padding-top: 135px;
   padding-bottom: 135px;
 }
