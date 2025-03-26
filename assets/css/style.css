@@ -3033,8 +3033,14 @@ body.bright-sun-icon {
     margin-top: 35px;
   }
 
+  .home-scroll-btn {
+    display: none;
+  }
+  .light-theme .home-scroll-btn {
+    display: none;
+  }
   .bright-light-theme .home-scroll-btn {
-    color: skyblue;
+    display: none;
   }
 
   .avatar-container {
