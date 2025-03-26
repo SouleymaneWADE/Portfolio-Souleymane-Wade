@@ -1,5 +1,5 @@
 /* =====================================================
-   Resume section tabs and tab contents
+  Resume section tabs and tab contents
 ===================================================== */
 const resumeTabs = document.querySelector(".resume-tabs");
 const resumePortfolioTabBtns = resumeTabs.querySelectorAll(".tab-btn");
