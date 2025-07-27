@@ -1051,7 +1051,7 @@ body {
   display: grid;
   justify-items: center;
   row-gap: 3px;
-  animation: up-down 1.5s linear infinite;
+  /* animation: up-down 1.5s linear infinite; */
   animation-delay: 1.85s;
 }
 
@@ -1587,6 +1587,20 @@ body {
 
 .resume-items .item .info h5 {
   color: white;
+  font-size: var(--h5-font-size);
+  font-weight: var(--font-semi-bold);
+  white-space: break-spaces;
+  margin-bottom: 10px;
+}
+.light-theme .resume-items .item .info h5 {
+  color: white;
+  font-size: var(--h5-font-size);
+  font-weight: var(--font-semi-bold);
+  white-space: break-spaces;
+  margin-bottom: 10px;
+}
+.bright-light-theme .resume-items .item .info h5 {
+  color: darkblue;
   font-size: var(--h5-font-size);
   font-weight: var(--font-semi-bold);
   white-space: break-spaces;
@@ -2135,6 +2149,7 @@ body {
 }
 
 .portfolio-card .card-img img {
+    height: 200px;
   width: 100%;
 }
 
@@ -2838,7 +2853,7 @@ body {
 ========================================= */
 @media screen and (max-width: 1600px) {
   .cursor {
-    /* display: none; */
+    display: none;
   }
 
   .wade-container {
