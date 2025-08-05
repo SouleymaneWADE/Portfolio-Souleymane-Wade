@@ -1960,7 +1960,6 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 25px;
-  max-height: 400px;
   margin-top: 50px;
   padding: 10px;
   overflow-y: auto;
@@ -2276,6 +2275,9 @@ body {
 
 .portfolio-modal .modal-img img {
   width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
   border-radius: 10px;
 }
 
@@ -2896,7 +2898,8 @@ body {
     place-items: center;
   }
 
-  .about-description {
+  .about-description .iam {
+    text-align: center;
     max-width: 700px;
   }
 
